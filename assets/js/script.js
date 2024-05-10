@@ -38,19 +38,16 @@ btn.addEventListener("click", ()=>{
     generatePage(true)
 })
 
-let initialObject = {
-    author:"",
-    quote:"",
-    photo:""
-}
-
-
-
 generatePage(false)
 
 function generateTitle(element) {
     const h1 = document.querySelector("h1")
     h1.innerText = `A quote from ${element}`
+}
+let initialObject = {
+    author:"",
+    quote:"",
+    photo:""
 }
 
 function generatePage(bool) {
