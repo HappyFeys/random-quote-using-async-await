@@ -1,0 +1,79 @@
+@mixin responsive($width) {
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+$platinium : #EBE6E0;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/pexels-introspectivedsgn-6159693.jpg");
+    background-size: 500%;
+    background-repeat: no-repeat;
+    color: $platinium;
+    font-family: "Sedan SC", serif;
+    @include responsive(425px){
+        background-size: 400%;
+    }
+    @include responsive(610px){
+        background-size: 300%;
+    }
+    @include responsive(850px){
+        background-size: 200%;
+    }
+    @include responsive(1024px){
+        background-size: 150%;
+    }
+    main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1{
+            width: 50%;
+            font-size: 32px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        button{
+            border-radius: 20px;
+            padding: 10px;
+            background-color: $platinium;
+            color: #333;
+            box-shadow: 1px 1px 4px $platinium;
+            border: none;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            blockquote{
+                font-size: 32px;
+                width: 75%;
+                font-style: italic;
+                text-align: center;
+            }
+            img{
+                width: 300px;
+                border-radius: 150px;
+                margin: 20px 0;
+            }
+            .author{
+                color: #fff;
+                font-size: 20px;
+            }
+            
+        }
+    }
+}
+
